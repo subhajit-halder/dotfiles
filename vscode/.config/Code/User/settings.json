@@ -45,5 +45,8 @@
         }
     },
     "terminal.integrated.defaultProfile.linux": "zsh (2)",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/.git": false
+    }
 }
