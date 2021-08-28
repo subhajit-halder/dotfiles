@@ -1,0 +1,49 @@
+{
+    "editor.fontFamily": "'Iosevka','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "window.menuBarVisibility": "compact",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "editor.fontSize": 16,
+    "vscode-decompiler.tool.ghidra.path": "/home/subhajit/Ghidra/ghidra_9.2.3_PUBLIC_20210325/ghidra_9.2.3_PUBLIC/support/analyzeHeadless",
+    "vscode-neovim.neovimExecutablePaths.linux": "/home/subhajit/.config/nvim-nighty/nvim.appimage",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/subhajit/.config/nvim-nighty/init.vim",
+    "update.mode": "start",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "explorer.confirmDelete": false,
+    "diffEditor.wordWrap": "on",
+    "jupyter.alwaysTrustNotebooks": true,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.automationShell.linux": "",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+        "zsh (2)": {
+            "path": "/usr/bin/zsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh (2)",
+    "explorer.confirmDragAndDrop": false
+}
