@@ -1,0 +1,1 @@
+put the .themes folder in your $HOME to use the gtk themes
