@@ -1,1 +1,2 @@
-put the .themes folder in your $HOME to use the gtk themes
+- put the contents `.themes` folder in your `$HOME` to use the gtk themes
+- put the contents of `icons` inside `$HOME/local/share/icons`
