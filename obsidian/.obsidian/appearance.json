@@ -1,0 +1,9 @@
+{
+  "baseFontSize": 16,
+  "cssTheme": "Spectrum",
+  "translucency": false,
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "font"
+  ]
+}

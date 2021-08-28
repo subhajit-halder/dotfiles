@@ -1,0 +1,122 @@
+{
+  "main": {
+    "id": "9265fda9bae3aba5",
+    "type": "split",
+    "children": [
+      {
+        "id": "0130ae1b27844f9a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Languages/git.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "0db0cac1c58b90dc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Linux/gnu stow.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f0b033022b3b2fad",
+    "type": "split",
+    "children": [
+      {
+        "id": "020f846a06fb1052",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfdbc7bf33e1fc73",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "964088dc1b79c061",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 464,
+    "collapsed": true
+  },
+  "right": {
+    "id": "d8387e9e5399523a",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d4f95c411882986",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6aa87d98f17bf9f1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Languages/git.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dc0971d87107c70b",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0130ae1b27844f9a",
+  "lastOpenFiles": [
+    "Languages/git.md",
+    "Linux/gnu stow.md",
+    "Linux/Untitled.md",
+    "5 Fall Sem 21-22/MGT1002 Lean Start-up Management/class notes.md",
+    "5 Fall Sem 21-22/MGT1002 Lean Start-up Management/Untitled.md",
+    "5 Fall Sem 21-22/MGT1002 Lean Start-up Management/Design thinking Assignment.md.md",
+    "5 Fall Sem 21-22/STS3005 Programming skills for employment/class 1.md",
+    "2.md",
+    "Languages/shell.md",
+    "5 Fall Sem 21-22/STS3005 Programming skills for employment/Untitled.md"
+  ]
+}
