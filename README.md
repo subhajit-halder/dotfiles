@@ -1,6 +1,5 @@
-## gtk 
-- put the contents `.themes` folder in your `$HOME` to use the gtk themes
-- put the contents of `icons` inside `$HOME/local/share/icons`
+## gtk theme
+- https://github.com/sainnhe/gruvbox-material-gtk
 
 ## obsidian
 - put all these files in your obsidian vault root
@@ -11,4 +10,3 @@
 
 - about:config 
   - `browser.fullscreen.autohide : false` 
-  - 
