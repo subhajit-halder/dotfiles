@@ -1,7 +1,7 @@
 ## screenshots
 
 ![](screenshots/neofetch.png) 
-![](screenshots/gtk%20and%20shell%20gruvbox%20material.png)
+![](screenshots/nvim%20nautilus.png)
 ![](screenshots/firefox.png) 
 ![](screenshots/vscode.png)
 
