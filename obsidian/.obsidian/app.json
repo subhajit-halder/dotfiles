@@ -1,9 +1,15 @@
 {
   "obsidianCss": true,
   "vimMode": true,
-  "promptDelete": true,
+  "promptDelete": false,
   "showUnsupportedFiles": true,
   "alwaysUpdateLinks": true,
   "showLineNumber": false,
-  "foldHeading": false
+  "foldHeading": false,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

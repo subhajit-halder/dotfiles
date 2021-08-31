@@ -4,6 +4,7 @@
   "translucency": false,
   "theme": "obsidian",
   "enabledCssSnippets": [
-    "font"
+    "font",
+    "config"
   ]
 }
