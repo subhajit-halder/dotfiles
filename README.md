@@ -3,9 +3,9 @@
 - [Table of content](#table-of-content)
 - [Screenshots](#screenshots)
 - [Application list](#application-list)
-- [gtk/icon theme](#gtkicon-theme)
-- [Obsidian](#obsidian)
-- [Firefox](#firefox)
+  - [Obsidian](#obsidian)
+  - [gtk/icon theme](#gtkicon-theme)
+  - [Firefox](#firefox)
 
 ## Screenshots
 
@@ -33,16 +33,16 @@
   - Chrome
   - Chromium
 
-## gtk/icon theme
-
-- <https://github.com/sainnhe/gruvbox-material-gtk>
-
-## Obsidian
+### Obsidian
 
 - put `.obsidian` in your obsidian vault root
 - `.obsidian.vimrc` is config file for the obsidian vim mode  (plugin - <https://github.com/esm7/obsidian-vimrc-support>)
 
-## Firefox
+### gtk/icon theme
+
+- <https://github.com/sainnhe/gruvbox-material-gtk>
+
+### Firefox
 
  all of my other settings are done through the browser
 
