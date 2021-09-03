@@ -6,6 +6,7 @@
   - [Obsidian](#obsidian)
   - [gtk/icon theme](#gtkicon-theme)
   - [Firefox](#firefox)
+  - [VScode](#vscode)
 
 ## Screenshots
 
@@ -15,12 +16,14 @@
 
 ## Application list
 
-- Development
+- Development / notetaking
   - neovim
   - VScode
   - Jupyter notebook
   - RStudio
   - Android Studio
+  - Obsidian
+  - Marktext
 - Tools
   - alacritty
   - kitty
@@ -28,6 +31,7 @@
   - virtualbox
   - virt-manager
   - nautilus
+  - bitwarden
 - Browser
   - Firefox
   - Chrome
@@ -48,3 +52,7 @@
 
 - about:config
   - `browser.fullscreen.autohide : false`
+
+### VScode
+
+extension list stored in `vscode`  
