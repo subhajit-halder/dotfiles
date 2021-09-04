@@ -1,4 +1,7 @@
 #!/bin/sh
 
+# source 
+# https://www.michaelanhari.com/blog/saving-your-vs-code-settings-on-github
 echo "Saving VSCode extensions..."
 code --list-extensions > "$HOME"/dotfiles/vscode/.config/Code/User/code_extensions
+code --list-extensions > "$HOME"/dotfiles/bin/code_extensions
