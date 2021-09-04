@@ -7,7 +7,7 @@ GRUB_DEFAULT="0"
 GRUB_TIMEOUT_STYLE="hidden"
 GRUB_TIMEOUT="0"
 GRUB_DISTRIBUTOR="`lsb_release -i -s 2> /dev/null || echo Debian`"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash radeon.modeset=1 processor.max_cstate=1 idle=nomwait"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash radeon.modeset=1 processor.max_cstate=1 iommu=soft idle=nomwait"
 GRUB_CMDLINE_LINUX=""
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
