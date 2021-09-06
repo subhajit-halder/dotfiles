@@ -99,7 +99,7 @@ ZSH_THEME="frontcube"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages themes zsh-autosuggestions command-not-found)
+plugins=(colored-man-pages themes zsh-autosuggestions command-not-found zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
