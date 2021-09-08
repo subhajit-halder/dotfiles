@@ -142,13 +142,19 @@ source $ZSH/oh-my-zsh.sh
 alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -L 2"
 alias tree1="tree -L 1"
-alias ghidra="/home/subhajit/Ghidra/ghidra_9.2.3_PUBLIC_20210325/ghidra_9.2.3_PUBLIC/ghidraRun" # gidhra reverse engineering tool
-alias nvimn="/home/subhajit/.config/nvim-nighty/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
-alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
-alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
-alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
-alias cool-retro-terminal="/home/subhajit/Downloads/applications/'cool retro terminal'/Cool-Retro-Term-1.1.1-x86_64.AppImage"
+# alias nvimn="/home/subhajit/.config/nvim-nighty/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
+# alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
+# alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
+# alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
+# alias cool-retro-terminal="/home/subhajit/Downloads/applications/'cool retro terminal'/Cool-Retro-Term-1.1.1-x86_64.AppImage"
 alias nerdfetch="/home/subhajit/Downloads/applications/nerdfetch/nerdfetch"
-alias quickemu="/home/subhajit/Downloads/applications/quickemu/quickemu"
-alias rpan-studio="/home/subhajit/Downloads/applications/rpan-studio/rpan-studio-26.0.2.1-linux.AppImage"
-alias libgen="/home/subhajit/Downloads/applications/libgen-cli-v1.0.7-linux"
+# alias quickemu="/home/subhajit/Downloads/applications/quickemu/quickemu"
+# alias rpan-studio="/home/subhajit/Downloads/applications/rpan-studio/rpan-studio-26.0.2.1-linux.AppImage"
+# alias libgen="/home/subhajit/Downloads/applications/libgen-cli-v1.0.7-linux"
+# for pip package 'pip_search'
+alias pip='function _pip(){
+    if [ $1 = "search" ]; then
+        pip_search "$2";
+    else pip "$@";
+    fi;
+};_pip'
