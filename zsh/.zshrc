@@ -24,6 +24,7 @@ path+=('/home/subhajit/.local/bin')
 # export to sub-processes (make it inherited by child processes)
 export PATH
 export JAVA_HOME="/usr/bin/java"
+# export WEECHAT_HOME="~/.config/weechat"
  
 #░█████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗  ███████╗░██████╗██╗░░██╗
 #██╔══██╗██║░░██║  ████╗░████║╚██╗░██╔╝  ╚════██║██╔════╝██║░░██║
