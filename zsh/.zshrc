@@ -159,3 +159,4 @@ alias pip='function _pip(){
     else pip "$@";
     fi;
 };_pip'
+alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"

@@ -1,0 +1,38 @@
+{
+    "theme": "dark",
+    "autoUpdate": false,
+    "snippet": {
+        "expanded": true,
+        "newSnippetPrivate": true,
+        "sorting": "updated_at", 
+        "sortingReverse": true
+    },
+    "editor" : {
+        "tabSize": 4,
+        "validateFilename": true
+    },
+    "userPanel": {
+        "hideProfilePhoto": false
+    },
+    "logger": {
+        "level": "debug"
+    },
+    "proxy": {
+        "enable": false,
+    },
+    "notifications": {
+        "success": true,
+        "failure": true
+    },
+    "shortcuts": {
+        "keyShortcutForSearch": "CMD+F",
+        "keyNewGist": "CommandOrControl+N",
+        "keyEditGist": "CommandOrControl+E",
+        "keySubmitGist": "CommandOrControl+S",
+        "keyImmersiveMode": "CommandOrControl+I",
+        "keyAboutPage": "CommandOrControl+,",
+        "keyDashboard": "CommandOrControl+D",
+        "keyEditorExit": "CommandOrControl+Escape",
+        "keySyncGists": "CommandOrControl+R"
+    }
+}
