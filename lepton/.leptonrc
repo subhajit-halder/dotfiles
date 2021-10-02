@@ -25,7 +25,7 @@
         "failure": true
     },
     "shortcuts": {
-        "keyShortcutForSearch": "CMD+F",
+        "keyShortcutForSearch": "CommandOrControl+F",
         "keyNewGist": "CommandOrControl+N",
         "keyEditGist": "CommandOrControl+E",
         "keySubmitGist": "CommandOrControl+S",

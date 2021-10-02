@@ -40,7 +40,7 @@ export ZSH="/home/subhajit/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="jaischeema"
+ZSH_THEME="juanghurtado"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,7 +102,7 @@ ZSH_THEME="jaischeema"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages themes zsh-autosuggestions command-not-found)
+plugins=(colored-man-pages themes zsh-autosuggestions command-not-found zsh-autocomplete web-search copydir)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -160,3 +160,12 @@ alias pip='function _pip(){
     fi;
 };_pip'
 alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
+
+# █▀█ █░░ █░█ █▀▀ █ █▄░█   █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
+# █▀▀ █▄▄ █▄█ █▄█ █ █░▀█   ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█
+
+# zsh-autocomplete settings 
+
+zstyle ':autocomplete:*' insert-unambiguous yes
+# no:  Tab inserts the top completion.
+# yes: Tab first inserts a substring common to all listed completions, if any.
