@@ -102,7 +102,7 @@ ZSH_THEME="juanghurtado"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages themes zsh-autosuggestions command-not-found zsh-autocomplete web-search copydir)
+plugins=(colored-man-pages themes command-not-found zsh-autocomplete web-search copydir)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -147,7 +147,7 @@ alias tree1="tree -L 1"
 # alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
 alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
 alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
-# alias cool-retro-terminal="/home/subhajit/Downloads/applications/'cool retro terminal'/Cool-Retro-Term-1.1.1-x86_64.AppImage"
+alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
 alias nerdfetch="/home/subhajit/Downloads/applications/nerdfetch/nerdfetch"
 # alias quickemu="/home/subhajit/Downloads/applications/quickemu/quickemu"
 # alias rpan-studio="/home/subhajit/Downloads/applications/rpan-studio/rpan-studio-26.0.2.1-linux.AppImage"
@@ -166,6 +166,18 @@ alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
 
 # zsh-autocomplete settings 
 
+zstyle ':autocomplete:*' min-delay 0.2  # float
+# Wait this many seconds for typing to stop, before showing completions.
+zstyle ':autocomplete:*' recent-dirs no
+# cdr:  Use Zsh's `cdr` function to show recent directories as completions.
+# no:   Don't show recent directories.
+# zsh-z|zoxide|z.lua|z.sh|autojump|fasd: Use this instead (if installed).
+# ⚠️ NOTE: This setting can NOT be changed at runtime.
 zstyle ':autocomplete:*' insert-unambiguous yes
-# no:  Tab inserts the top completion.
+# no: Tab inserts the top completion.
 # yes: Tab first inserts a substring common to all listed completions, if any.
+zstyle ':autocomplete:*' widget-style menu-complete
+# complete-word: (Shift-)Tab inserts the top (bottom) completion.
+# menu-complete: Press again to cycle to next (previous) completion.
+# menu-select:   Same as `menu-complete`, but updates selection in menu.
+# ⚠️ NOTE: This setting can NOT be changed at runtime.
