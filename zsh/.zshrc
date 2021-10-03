@@ -102,7 +102,15 @@ ZSH_THEME="juanghurtado"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colored-man-pages themes command-not-found zsh-autocomplete web-search copydir)
+plugins=(
+    colored-man-pages 
+    themes 
+    command-not-found 
+    zsh-autocomplete 
+    web-search 
+    copydir
+    # zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
