@@ -3,7 +3,7 @@ let g:mapleader = "\<Space>"
 
 syntax enable                           " Enables syntax highlighing
 set nohlsearch                          " disables highlighting after end of search
-" set relativenumber                      " relative numbering of lines
+set relativenumber                      " relative numbering of lines
 set incsearch                           " Incremental search show
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=utf-8                      " The encoding displayed
