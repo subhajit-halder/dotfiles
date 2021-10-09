@@ -48,7 +48,7 @@
 
 ### Firefox
 
- all of my other settings are done through the browser
+all of my other settings are done through the browser
 
 - about:config
   - `browser.fullscreen.autohide : false`

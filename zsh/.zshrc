@@ -19,11 +19,15 @@ path+=('/home/subhajit/.gem/ruby/2.7.0/bin')
 path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
 path+=('/home/subhajit/bin')
 path+=('/home/subhajit/.local/bin')
+path+=('/usr/local/go/bin')
+path+=('/home/subhajit/go/bin')
 # or prepend
 # path=('/home/david/pear/bin' $path)
 # export to sub-processes (make it inherited by child processes)
 export PATH
 export JAVA_HOME="/usr/bin/java"
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
 # export WEECHAT_HOME="~/.config/weechat"
  
 #░█████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗  ███████╗░██████╗██╗░░██╗
