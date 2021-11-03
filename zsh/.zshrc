@@ -1,6 +1,6 @@
 # running fortune at every startup
 # fortune literature | /home/subhajit/.gem/ruby/2.7.0/bin/lolcat -p
-fortune literature 
+echo -e "\e[3m\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
 
  
 #██████╗░░█████╗░████████╗██╗░░██╗░██████╗
@@ -44,7 +44,11 @@ export ZSH="/home/subhajit/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="juanghurtado"
+# ZSH_THEME="juanghurtado"
+ZSH_THEME="typewritten"
+
+# typewritten variables
+TYPEWRITTEN_PROMPT_LAYOUT="pure"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,10 +114,10 @@ plugins=(
     colored-man-pages 
     themes 
     command-not-found 
-    zsh-autocomplete 
     web-search 
     copydir
-    # zsh-autosuggestions
+    zsh-autosuggestions
+    # zsh-autocomplete 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -153,9 +157,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias bat="batcat" # bat is installed as batcat in debian
-alias tree2="tree -L 2"
-alias tree1="tree -L 1"
-# alias nvimn="/home/subhajit/.config/nvim-nighty/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
+alias tree2="tree -a -L 2"
+alias tree1="tree -a -L 1"
+# alias nvimn="/home/subhajit/Downloads/applications/neovim/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
+alias nvimn="/home/subhajit/Downloads/applications/neovim/nvim.appimage" 
 # alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
 alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
 alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
@@ -172,24 +177,10 @@ alias pip='function _pip(){
     fi;
 };_pip'
 alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
+alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'"
 
 # █▀█ █░░ █░█ █▀▀ █ █▄░█   █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
 # █▀▀ █▄▄ █▄█ █▄█ █ █░▀█   ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█
 
 # zsh-autocomplete settings 
-
-zstyle ':autocomplete:*' min-delay 0.2  # float
-# Wait this many seconds for typing to stop, before showing completions.
-zstyle ':autocomplete:*' recent-dirs no
-# cdr:  Use Zsh's `cdr` function to show recent directories as completions.
-# no:   Don't show recent directories.
-# zsh-z|zoxide|z.lua|z.sh|autojump|fasd: Use this instead (if installed).
-# ⚠️ NOTE: This setting can NOT be changed at runtime.
-zstyle ':autocomplete:*' insert-unambiguous yes
-# no: Tab inserts the top completion.
-# yes: Tab first inserts a substring common to all listed completions, if any.
-zstyle ':autocomplete:*' widget-style menu-complete
-# complete-word: (Shift-)Tab inserts the top (bottom) completion.
-# menu-complete: Press again to cycle to next (previous) completion.
-# menu-select:   Same as `menu-complete`, but updates selection in menu.
-# ⚠️ NOTE: This setting can NOT be changed at runtime.
+# source /home/subhajit/.oh-my-zsh/custom/plugin-config/zsh-autocomplete

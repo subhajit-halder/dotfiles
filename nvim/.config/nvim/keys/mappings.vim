@@ -31,3 +31,6 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
  " goyo plugin shortcut 
 nnoremap <C-g> :Goyo<CR>
+
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+inoremap <C-BS> <C-W>

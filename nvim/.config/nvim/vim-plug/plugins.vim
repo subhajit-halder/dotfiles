@@ -24,5 +24,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     " generate toc for md files
     Plug 'mzlogin/vim-markdown-toc'
+    " firenvim - Embed Neovim in Chrome, Firefox, Thunderbird and many other pieces of software.
+    " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    " UltiSnips is the ultimate solution for snippets in Vim. It has many features, speed being one of them
+    Plug 'SirVer/ultisnips'
+    " snippets repo
+    Plug 'honza/vim-snippets'
 
 call plug#end()
