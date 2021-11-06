@@ -28,6 +28,7 @@ export PATH
 export JAVA_HOME="/usr/bin/java"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
+export EDITOR="nv"
 # export WEECHAT_HOME="~/.config/weechat"
  
 #░█████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗  ███████╗░██████╗██╗░░██╗
@@ -160,8 +161,8 @@ alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
 # alias nvimn="/home/subhajit/Downloads/applications/neovim/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
-alias nvimn="/home/subhajit/Downloads/applications/neovim/nvim.appimage" 
-# alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
+# alias nvn="/home/subhajit/Downloads/applications/neovim/nvim.appimage" 
+alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
 alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
 alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
 alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
@@ -178,6 +179,7 @@ alias pip='function _pip(){
 };_pip'
 alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'"
+alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/"
 
 # █▀█ █░░ █░█ █▀▀ █ █▄░█   █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
 # █▀▀ █▄▄ █▄█ █▄█ █ █░▀█   ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█

@@ -15,3 +15,4 @@ source $HOME/dotfiles/nvim/.config/nvim/plug-config/vim-markdown-toc.vim
 source $HOME/dotfiles/nvim/.config/nvim/plug-config/goyo.vim
 source $HOME/dotfiles/nvim/.config/nvim/plug-config/markdown-preview.vim
 source $HOME/dotfiles/nvim/.config/nvim/plug-config/ultisnips.vim
+

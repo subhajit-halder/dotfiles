@@ -30,5 +30,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'SirVer/ultisnips'
     " snippets repo
     Plug 'honza/vim-snippets'
-
+    
 call plug#end()
