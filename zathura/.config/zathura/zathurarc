@@ -6,20 +6,22 @@ set window-title-basename "true"
 set window-title-home-tilde "true"
 # use clipboard 
 set selection-clipboard "clipboard"
-#
+# horizontally centered search
+set search-hadjust "false"
+# horizontally centered zooming 
+set zoom-center "true"
 # while opening for first time, window height
 set window-height 1024
 set window-width 768
-set adjust-open width
-#
+# how to adjust page when first open, best-fit or width
+set adjust-open best-fit
 # use sqlite as bookmarks database backend
 set database sqlite
-#
 # font
-set font "Iosevka regular 18"
+# set font "Iosevka regular 18"
+set font "FantasqueSansMono Nerd Font 20"
 # gruvbox material color scheme/theme
 include zathura-gruvbox-dark
-#
 # key bindings
 map <PageUp> navigate previous
 map <PageDown> navigate next
