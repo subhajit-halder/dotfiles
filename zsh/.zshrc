@@ -1,6 +1,9 @@
 # running fortune at every startup
 # fortune literature | /home/subhajit/.gem/ruby/2.7.0/bin/lolcat -p
-echo -e "\e[3m\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
+# below is for italic bold
+# echo -e "\e[3m\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
+# below is for bold only
+echo -e "\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
 
  
 #██████╗░░█████╗░████████╗██╗░░██╗░██████╗

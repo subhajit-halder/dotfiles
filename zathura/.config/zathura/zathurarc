@@ -13,10 +13,20 @@ set zoom-center "true"
 # while opening for first time, window height
 set window-height 1024
 set window-width 768
+# `guioptions` 
+# Shows or hides GUI elements.  If it contains 'c', the command line is
+# displayed.  If it contains 's', the statusbar is displayed.  If it 
+# contains 'h', the horizontal scrollbar is displayed.  If it contains 
+# 'v', the vertical scrollbar  is  displayed.
+set guioptions "s"
 # how to adjust page when first open, best-fit or width
 set adjust-open best-fit
 # use sqlite as bookmarks database backend
 set database sqlite
+# use file basename in statusbar
+set statusbar-basename "true"
+# Center the screen at the vertical midpoint of the page by default.
+set vertical-center "true"
 # font
 # set font "Iosevka regular 18"
 set font "FantasqueSansMono Nerd Font 20"
@@ -28,3 +38,4 @@ map <PageDown> navigate next
 map + zoom in
 map - zoom out
 map <C-q> quit
+map <C-h> toggle_statusbar
