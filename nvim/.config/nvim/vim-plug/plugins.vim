@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     " gruvbox material theme
     Plug 'sainnhe/gruvbox-material'  
+    " Solarized theme 
+    Plug 'altercation/vim-colors-solarized'
     " vim-airline
     Plug 'vim-airline/vim-airline'
     " goyo - distraction free writing

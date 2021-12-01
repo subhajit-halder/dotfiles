@@ -1,13 +1,13 @@
 {
     "editor.fontFamily": "'FantasqueSansMono Nerd Font'",
     "editor.fontLigatures": true,
-    "window.zoomLevel": 2,
-    "terminal.integrated.fontFamily": "'Iosevka Term'",
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font'",
     "debug.console.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "workbench.colorTheme": "Gruvbox Material Dark",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "terminal.integrated.fontSize": 16,
     "vim.insertModeKeyBindings": [
         {
@@ -19,6 +19,10 @@
       "promptForTags": true
     },
     "window.menuBarVisibility": "toggle",
-    "gruvboxMaterial.italicKeywords": true
+    "gruvboxMaterial.italicKeywords": true,
+    "markdown.preview.fontFamily": "'karla',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "editor.cursorStyle": "underline",
+    "workbench.welcomePage.preferReducedMotion": true,
+    "terminal.external.linuxExec": "kitty"
       
 }

@@ -13,6 +13,8 @@
 
 " enable italics in keywords
   let g:gruvbox_material_enable_italic = 1
+" enable bold
+  let g:gruvbox_material_enable_bold = 1
 
 " disable transparent background
   let g:gruvbox_material_transparent_background = 0

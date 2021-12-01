@@ -183,6 +183,8 @@ alias pip='function _pip(){
 alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'"
 alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/"
+# for displaying image inside kitty
+alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg"
 
 # █▀█ █░░ █░█ █▀▀ █ █▄░█   █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
 # █▀▀ █▄▄ █▄█ █▄█ █ █░▀█   ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█
