@@ -10,9 +10,9 @@
 
 ## Screenshots
 
-| ![](screenshots/neofetch.png) | ![](screenshots/nvim%20nautilus.png) |
+| ![](screenshots/fetch.png) | ![](screenshots/code.png) |
 |-------------------------------|--------------------------------------|
-| ![](screenshots/firefox.png)  | ![](screenshots/vscode.png)          |
+| ![](screenshots/zathura.png)  | ![](screenshots/firefox.png)          |
 
 ## Application list
 
