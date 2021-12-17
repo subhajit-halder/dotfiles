@@ -2,10 +2,12 @@
 # c.content.javascript.enabled = False is the same as writing ;
 # config.set('content.javascript.enabled', Flase)
 
-# load autoconfig.yml file configured by the browser first, all the settins in config.py will override that
+# load autoconfig.yml file configured by the browser first, all the settings in config.py will override that
 # put this in the end if you want to reverse that 
 config.load_autoconfig()
 
+# auto save sessions 
+c.auto_save.session = True
 # set smooth scrolling
 c.scrolling.smooth = True
 # Default zoom
