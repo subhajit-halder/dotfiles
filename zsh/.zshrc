@@ -3,7 +3,8 @@
 # below is for italic bold
 # echo -e "\e[3m\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
 # below is for bold only
-echo -e "\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
+# echo -e "\e[1m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
+echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom people)\e[0m"
 
  
 #██████╗░░█████╗░████████╗██╗░░██╗░██████╗
@@ -191,3 +192,7 @@ alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wall
 
 # zsh-autocomplete settings 
 # source /home/subhajit/.oh-my-zsh/custom/plugin-config/zsh-autocomplete
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
