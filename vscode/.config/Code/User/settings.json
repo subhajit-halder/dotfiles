@@ -1,13 +1,13 @@
 {
     "editor.fontFamily": "'FantasqueSansMono Nerd Font'",
     "editor.fontLigatures": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font'",
     "debug.console.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "workbench.colorTheme": "Gruvbox Material Dark",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.fontSize": 20,
+    "editor.fontSize": 18,
     "terminal.integrated.fontSize": 16,
     "vim.insertModeKeyBindings": [
         {
