@@ -9,13 +9,13 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
+    " Plug 'sheerun/vim-polyglot'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " gruvbox material theme
     Plug 'sainnhe/gruvbox-material'  
     " Solarized theme 
-    Plug 'altercation/vim-colors-solarized'
+    " Plug 'altercation/vim-colors-solarized'
     " vim-airline
     Plug 'vim-airline/vim-airline'
     " goyo - distraction free writing

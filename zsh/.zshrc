@@ -1,3 +1,6 @@
+zmodload zsh/zprof
+
+
 # running fortune at every startup
 # fortune literature | /home/subhajit/.gem/ruby/2.7.0/bin/lolcat -p
 # below is for italic bold
@@ -19,10 +22,10 @@ echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom people)\e
 # for ruby/gem in /home/subhajit/.gem/ruby/2.7.0/bin
 # export PATH="/home/subhajit/.gem/ruby/2.7.0/bin"
 # appending path from https://stackoverflow.com/a/18077919/10356784
-path+=('/home/subhajit/.gem/ruby/2.7.0/bin')
+#path+=('/home/subhajit/.gem/ruby/2.7.0/bin')
 path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
 path+=('/home/subhajit/bin')
-path+=('/home/subhajit/.local/bin')
+#path+=('/home/subhajit/.local/bin')
 path+=('/usr/local/go/bin')
 path+=('/home/subhajit/go/bin')
 # or prepend
@@ -32,9 +35,17 @@ export PATH
 export JAVA_HOME="/usr/bin/java"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
-export EDITOR="nv"
+#
 # export WEECHAT_HOME="~/.config/weechat"
  
+# Lazy loading NVM
+# settings of nvm zsh plugin
+export NVM_LAZY=1
+# export NVM_AUTOLOAD=1
+#
+#Disable evalcache
+#export ZSH_EVALCACHE_DISABLE=true
+
 #░█████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗  ███████╗░██████╗██╗░░██╗
 #██╔══██╗██║░░██║  ████╗░████║╚██╗░██╔╝  ╚════██║██╔════╝██║░░██║
 #██║░░██║███████║  ██╔████╔██║░╚████╔╝░  ░░███╔═╝╚█████╗░███████║
@@ -116,14 +127,16 @@ TYPEWRITTEN_PROMPT_LAYOUT="pure"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    nvm
     colored-man-pages 
     themes 
     command-not-found 
     web-search 
     copydir
     zsh-autosuggestions
-    # zsh-autocomplete 
 )
+# zsh-autocomplete 
+#evalcache
 
 source $ZSH/oh-my-zsh.sh
 
@@ -164,26 +177,24 @@ source $ZSH/oh-my-zsh.sh
 alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
-# alias nvimn="/home/subhajit/Downloads/applications/neovim/nvim.appimage -u /home/subhajit/.config/nvim-nighty/blank-init.vim" # neovim nighty
-# alias nvn="/home/subhajit/Downloads/applications/neovim/nvim.appimage" 
 alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
 alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
 alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
 alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
 alias nerdfetch="/home/subhajit/Downloads/applications/nerdfetch/nerdfetch"
+alias rxfetch="/home/subhajit/Downloads/applications/rxfetch/rxfetch"
 # alias quickemu="/home/subhajit/Downloads/applications/quickemu/quickemu"
-# alias rpan-studio="/home/subhajit/Downloads/applications/rpan-studio/rpan-studio-26.0.2.1-linux.AppImage"
 # alias libgen="/home/subhajit/Downloads/applications/libgen-cli-v1.0.7-linux"
-# for pip package 'pip_search'
-alias pip='function _pip(){
-    if [ $1 = "search" ]; then
-        pip_search "$2";
-    else pip "$@";
-    fi;
-};_pip'
+#
+# self hosted bookmark manager
 alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
+#
+# get window manager class in x11
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'"
+# 
+# check if connected to cloudflare warp
 alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/"
+#
 # for displaying image inside kitty
 alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg"
 
@@ -193,6 +204,33 @@ alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wall
 # zsh-autocomplete settings 
 # source /home/subhajit/.oh-my-zsh/custom/plugin-config/zsh-autocomplete
 
+# PIP PACKAGE SEARCH
+alias pip='function _pip(){
+    if [ $1 = "search" ]; then
+        pip_search "$2";
+    else pip "$@";
+    fi;
+};_pip'
+
+
+# NODE VERSION MANAGER
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# PYENV (PYTHON VERSION MANAGER)
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+#_evalcache pyenv init -
+#_evalcache pyenv init --path
+#_evalcache pyenv virtualenv-init -
+
+
+# zprof
+
+# timezsh() {
+#  shell=${1-$SHELL}
+#  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+#}

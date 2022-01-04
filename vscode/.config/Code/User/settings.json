@@ -18,12 +18,15 @@
     "go.addTags": {
       "promptForTags": true
     },
+    "vim.useSystemClipboard": true,
     "window.menuBarVisibility": "toggle",
     "gruvboxMaterial.italicKeywords": true,
     "markdown.preview.fontFamily": "'karla',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
     "editor.cursorStyle": "underline",
     "workbench.welcomePage.preferReducedMotion": true,
     "terminal.external.linuxExec": "kitty",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "gruvboxMaterial.darkContrast": "hard",
+    "editor.wordWrap": "off"
       
 }
