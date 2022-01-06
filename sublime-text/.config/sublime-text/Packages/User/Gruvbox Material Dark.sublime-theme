@@ -1,0 +1,30 @@
+{
+	// http://www.sublimetext.com/docs/3/themes.html
+	"variables": {
+		"font_face": "FantasqueSansMono Nerd Font",
+		"font_size_sm": 16,
+		"font_size": 12,
+		"font_size_lg": 13,
+		"font_size_title": 16,
+	},
+	"rules": [
+		{
+			"class": "sidebar_label",
+			"font.face": "Karla",
+			"font.size": 16,
+		},
+		{
+			"class": "sidebar_tree",
+			"row_padding": [16, 10, 10, 5],
+			"indent": 16,
+			"indent_offset": 13,
+			"indent_top_level": false,
+			"dark_content": true,
+			"spacer_rows": true
+		},
+		{
+			"class": "tab_label",
+			"font_size": 18
+		}
+	],
+}

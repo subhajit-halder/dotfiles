@@ -1,0 +1,23 @@
+{
+	"font_face": "Fantasquesansmono nerd font",
+	"font_size": 18,
+	"themed_title_bar": true, 	// allow theme to change title bar
+	"ignored_packages":
+	[
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"theme": "Gruvbox Material Dark.sublime-theme",
+	"color_scheme": "Gruvbox Material Dark.sublime-color-scheme",
+	"bold_folder_labels": true,
+	"highlight_line": true,
+	"caret_style": "blink",
+	"relative_line_numbers": true,
+	"vintageous_use_sys_clipboard": true,
+	"neovintageous_build_version": 11100,
+	"vintageous_i_escape_jk": true,
+	/*"vintageous_use_sys_clipboard": true,*/
+	"vintageous_terminal": "kitty",
+	"remember_layout": false,
+}
