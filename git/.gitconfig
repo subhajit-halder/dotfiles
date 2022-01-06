@@ -2,5 +2,8 @@
 [user]
     name = Subhajit Halder
     email = 54535412+subhajit-halder@users.noreply.github.com
+	signingkey = 59A1C5968DB5B956
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[commit]
+	gpgsign = true
