@@ -130,13 +130,13 @@ plugins=(
     nvm
     colored-man-pages 
     themes 
-    command-not-found 
     web-search 
     copydir
     zsh-autosuggestions
+    command-not-found 
 )
 # zsh-autocomplete 
-#evalcache
+# evalcache
 
 source $ZSH/oh-my-zsh.sh
 
