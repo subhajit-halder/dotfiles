@@ -40,6 +40,7 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 "set autochdir                          " Your working directory will always be the same as your working directory
 set backspace=indent,eol,start          " By default, Ctrl-W only deletes previous words in the text entered after last starting insert mode, and stops deleting text at the beginning of a line. The 'backspace' option can be set to control what is wanted. For example, the following causes Ctrl-W to always delete the previous word:
+set foldmethod=marker                   " :help foldmethod
 
 
 

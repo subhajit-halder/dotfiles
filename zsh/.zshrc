@@ -1,7 +1,9 @@
-# fortune to display a quote at top
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+
+# fortune, to display a quote at top
 echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom startrek people)\e[0m"
  
-# PATHS
+# PATHS{{{
 # appending path from https://stackoverflow.com/a/18077919/10356784
 path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
 path+=('/home/subhajit/bin')
@@ -15,6 +17,7 @@ export PATH
 export JAVA_HOME="/usr/bin/java"
 export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
+# }}}
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/subhajit/.oh-my-zsh"
@@ -24,19 +27,17 @@ ZSH_THEME="typewritten"
 
 TYPEWRITTEN_PROMPT_LAYOUT="pure"
 
-# https://github.com/davidparsson/zsh-pyenv-lazy
-export ZSH_PYENV_LAZY_VIRTUALENV=true
-
 plugins=(
+    fast-syntax-highlighting
     zsh-autosuggestions
     command-not-found 
-    fast-syntax-highlighting
-    # pyenv-lazy
+    colored-man-pages
+    history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# ALIASES
+# ALIASES{{{
 alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
@@ -50,18 +51,19 @@ alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'" # get window manager class in x11
 alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/" # check if connected to cloudflare warp
 alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg" # for displaying image inside kitty
+# }}}
 
 # PLUGIN OPTIONS
-# PIP PACKAGE SEARCH
+# PIP PACKAGE SEARCH{{{
 alias pip='function _pip(){
     if [ $1 = "search" ]; then
         pip_search "$2";
     else pip "$@";
     fi;
 };_pip'
+# }}}
 
-
-# NODE VERSION MANAGER
+# NODE VERSION MANAGER{{{
 nvm() {
     unset -f nvm
     export NVM_DIR="$HOME/.nvm"
@@ -69,22 +71,21 @@ nvm() {
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
     nvm "$@"
 }
-
 node() {
     unset -f node
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     node "$@"
 }
-
 npm() {
     unset -f npm
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     npm "$@"
 }
+# }}}
 
-# PYENV (PYTHON VERSION MANAGER)
+# PYENV (PYTHON VERSION MANAGER){{{
 # export PATH="$HOME/.pyenv/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # change prompt when activating venv
 # eval "$(pyenv init -)"
@@ -99,3 +100,4 @@ pyenv() {
     eval "$(pyenv virtualenv-init -)"
     pyenv "$@"
 }
+# }}}
