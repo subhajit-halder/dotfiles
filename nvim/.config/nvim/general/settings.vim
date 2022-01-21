@@ -4,6 +4,7 @@ let g:mapleader = "\<Space>"
 syntax enable                           " Enables syntax highlighing
 " set nohlsearch                          " disables highlighting after end of search
 set smartcase                           " ignores case when searching lower case 
+set nowrap                              " disable wrap
 set linebreak                           " wraps don't break words in the middle
 set ignorecase                          " ignores case when search, necessary for smartcase to work
 set relativenumber                      " relative numbering of lines

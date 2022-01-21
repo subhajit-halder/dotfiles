@@ -1,32 +1,36 @@
 {
-    "editor.fontFamily": "'FantasqueSansMono Nerd Font'",
-    "editor.fontLigatures": true,
-    "window.zoomLevel": 2,
-    "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font'",
-    "debug.console.fontSize": 16,
-    "markdown.preview.fontSize": 16,
-    "workbench.colorTheme": "Gruvbox Material Dark",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.fontSize": 18,
-    "terminal.integrated.fontSize": 16,
-    "vim.insertModeKeyBindings": [
-        {
-          "before": ["j", "k"],
-          "after": ["<Esc>"]
-        }
-      ],
-    "go.addTags": {
-      "promptForTags": true
-    },
-    "vim.useSystemClipboard": true,
-    "window.menuBarVisibility": "toggle",
-    "gruvboxMaterial.italicKeywords": true,
-    "markdown.preview.fontFamily": "'karla',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
-    "editor.cursorStyle": "underline",
-    "workbench.welcomePage.preferReducedMotion": true,
-    "terminal.external.linuxExec": "kitty",
-    "explorer.confirmDelete": false,
-    "gruvboxMaterial.darkContrast": "hard",
-    "editor.wordWrap": "off"
-      
+  "editor.fontFamily": "'FantasqueSansMono Nerd Font'",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 2,
+  "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font'",
+  "debug.console.fontSize": 16,
+  "markdown.preview.fontSize": 16,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "go.addTags": {
+    "promptForTags": true
+  },
+  "vim.useSystemClipboard": true,
+  "window.menuBarVisibility": "toggle",
+  "gruvboxMaterial.italicKeywords": true,
+  "markdown.preview.fontFamily": "'karla',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  "editor.cursorStyle": "underline",
+  "workbench.welcomePage.preferReducedMotion": true,
+  "terminal.external.linuxExec": "kitty",
+  "explorer.confirmDelete": false,
+  "gruvboxMaterial.darkContrast": "hard",
+  "editor.wordWrap": "off",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.CustomBrowser": "chrome"
 }

@@ -4,6 +4,10 @@
 #
 # See 'info stow' section "4 Ignore Lists" for more information
 
+zsh-kali/*
+firefox/*
+dotfiles-precommit-hook
+
 RCS
 .+,v
 
