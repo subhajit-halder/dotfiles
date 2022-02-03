@@ -3,30 +3,31 @@
 # fortune, to display a quote at top
 # echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom startrek people)\e[0m"
  
-# PATHS{{{
+# PATHS and ENV Variables {{{
 # appending path from https://stackoverflow.com/a/18077919/10356784
-path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
-path+=('/home/subhajit/bin')
-path+=('/usr/local/go/bin')
-path+=('/home/subhajit/go/bin')
+# path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
+# path+=("$HOME/bin") # $HOME/bin 
+# GOLANG (https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+# RUBY
 #path+=('/home/subhajit/.gem/ruby/2.7.0/bin')
 #path+=('/home/subhajit/.local/bin')
 # or prepend
 # path=('/home/david/pear/bin' $path)
-export PATH
+# JAVA
 export JAVA_HOME="/usr/bin/java"
-export GOPATH="$HOME/go"
-export GOBIN="$GOPATH/bin"
 # }}}
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/subhajit/.oh-my-zsh"
 
 # THEME
-ZSH_THEME="typewritten"
+#ZSH_THEME="typewritten"
+ZSH_THEME="subhajit"
 # typewritten theme settings{{{
 # source : https://typewritten.dev/#/prompt_customization
-# TYPEWRITTEN_PROMPT_LAYOUT="pure" # singleline, half_pure , pure, singleline_verbose, and multiline
+TYPEWRITTEN_PROMPT_LAYOUT="pure" # singleline, half_pure , pure, singleline_verbose, and multiline
 # TYPEWRITTEN_SYMBOL="❯"
 # TYPEWRITTEN_ARROW_SYMBOL="->"
 # TYPEWRITTEN_RELATIVE_PATH="git" # git, home, adaptive, or off
@@ -43,12 +44,6 @@ plugins=(
     history-substring-search
     zsh-fzf-history-search
 )
-
-
-# PLUGIN OPTIONS {{{
-# fzf {{{
-DISABLE_FZF_AUTO_COMPLETION="true"
-# }}}
 
 # PIP PACKAGE SEARCH{{{
 alias pip='function _pip(){
@@ -99,7 +94,12 @@ pyenv() {
     pyenv "$@"
 }
 # }}}
-#}}}
+
+# Plugin options {{{
+#  zsh-fzf-history-search {{{
+DISABLE_FZF_AUTO_COMPLETION="true"
+# }}}
+# }}}
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,4 +119,3 @@ alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/" # check if conn
 alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg" # for displaying image inside kitty
 # }}}
 
-# Functions 

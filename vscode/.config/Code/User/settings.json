@@ -26,11 +26,14 @@
   "workbench.welcomePage.preferReducedMotion": true,
   "terminal.external.linuxExec": "kitty",
   "explorer.confirmDelete": false,
-  "gruvboxMaterial.darkContrast": "hard",
   "editor.wordWrap": "off",
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "liveServer.settings.CustomBrowser": "chrome"
+  "liveServer.settings.CustomBrowser": "chrome",
+  "gruvboxMaterial.darkContrast": "hard",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.dragAndDrop": false
 }
