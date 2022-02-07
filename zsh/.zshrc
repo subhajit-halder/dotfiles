@@ -17,6 +17,8 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # path=('/home/david/pear/bin' $path)
 # JAVA
 export JAVA_HOME="/usr/bin/java"
+# hyperledger executables;
+export PATH=/home/subhajit/MyProjects/Hyperledger/fabric-samples/bin:$PATH
 # }}}
 
 # Path to your oh-my-zsh installation.
