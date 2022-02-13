@@ -4,6 +4,7 @@
 	"themed_title_bar": true, 	// allow theme to change title bar
 	"ignored_packages":
 	[
+		"NeoVintageous",
 		"Six",
 		"Vintage",
 		"Vintageous",
@@ -14,11 +15,11 @@
 	"highlight_line": true,
 	"caret_style": "blink",
 	"relative_line_numbers": true,
-	"vintageous_use_sys_clipboard": true,
-	"neovintageous_build_version": 11100,
-	"vintageous_i_escape_jk": true,
-	/*"vintageous_use_sys_clipboard": true,*/
-	"vintageous_terminal": "kitty",
+	// "vintageous_use_sys_clipboard": true,
+	// "neovintageous_build_version": 11100,
+	// "vintageous_i_escape_jk": true,
+	// "vintageous_use_sys_clipboard": true,
+	// "vintageous_terminal": "kitty",
 	"remember_layout": false,
 	"remember_workspace": false,
 	"hot_exit": "disabled",

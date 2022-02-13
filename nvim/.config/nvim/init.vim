@@ -9,7 +9,6 @@ source $HOME/dotfiles/nvim/.config/nvim/keys/mappings.vim
 
 " plugin specific config
 source $HOME/dotfiles/nvim/.config/nvim/themes/gruvbox-material.vim
-" source $HOME/dotfiles/nvim/.config/nvim/themes/solarized.vim
 source $HOME/dotfiles/nvim/.config/nvim/themes/airline.vim
 source $HOME/dotfiles/nvim/.config/nvim/plug-config/start-screen.vim
 source $HOME/dotfiles/nvim/.config/nvim/plug-config/vim-markdown-toc.vim

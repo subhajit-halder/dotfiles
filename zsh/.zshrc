@@ -110,8 +110,9 @@ alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
 alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
-alias ytdla="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
-alias ytdl="youtube-dl --verbose --no-check-certificate --prefer-ffmpeg --add-metadata --all-subs --restrict-filenames --embed-thumbnail --merge-output-format mp4 --recode-video mp4" #best video quality
+# yt-dlp reference: https://write.corbpie.com/downloading-youtube-videos-and-playlists-with-yt-dlp/
+#best quality mp3: yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp3'
+alias ytdlpa="yt-dlp -f 'ba' -x --audio-format mp3 "
 alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
 alias nerdfetch="/home/subhajit/Downloads/applications/nerdfetch/nerdfetch"
 alias rxfetch="/home/subhajit/Downloads/applications/rxfetch/rxfetch"

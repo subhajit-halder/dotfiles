@@ -15,10 +15,8 @@
   let g:gruvbox_material_enable_italic = 1
 " enable bold
   let g:gruvbox_material_enable_bold = 1
-
-" disable transparent background
+" transparent background
   let g:gruvbox_material_transparent_background = 0
-    
 
   " this should be at the end of file
   colorscheme gruvbox-material
