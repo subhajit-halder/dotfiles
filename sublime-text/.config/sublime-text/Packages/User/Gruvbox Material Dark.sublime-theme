@@ -1,21 +1,22 @@
 {
 	// http://www.sublimetext.com/docs/3/themes.html
-	"variables": {
-		"font_face": "FantasqueSansMono Nerd Font",
-		"font_size_sm": 16,
-		"font_size": 12,
-		"font_size_lg": 13,
-		"font_size_title": 16,
-	},
+	// "variables": {
+	// 	"font_face": "FantasqueSansMono Nerd Font",
+	// 	"font_size_sm": 16,
+	// 	"font_size": 12,
+	// 	"font_size_lg": 13,
+	// 	"font_size_title": 16,
+	// },
 	"rules": [
 		{
 			"class": "sidebar_label",
 			"font.face": "Karla",
-			"font.size": 16,
+			"font.size": 18,
 		},
 		{
 			"class": "sidebar_tree",
-			"row_padding": [16, 10, 10, 5],
+			"font.face": "FantasqueSansMono Nerd Font",
+			"row_padding": [10, 10, 10, 8],
 			"indent": 16,
 			"indent_offset": 13,
 			"indent_top_level": false,
@@ -24,7 +25,48 @@
 		},
 		{
 			"class": "tab_label",
-			"font_size": 18
-		}
+			"font.face": "Karla",
+			"font.size": 20
+		},
+
+		//quick panel (command panel)
+		{
+			"class": "quick_panel_label",
+			"font.face": "Fantasquesansmono nerd font",
+			"font.size": 22
+		},
+		{
+			"class": "quick_panel_label key_binding",
+			"font.size": 20,
+			"font.face": "Karla",
+			"font.italic": true
+		},
+
+		//input 
+		{
+			"class": "text_line_control",
+			"font.face": "Karla",
+			"font.size": 16
+		},
+
+		//tool tips
+		{
+			"class": "tool_tip_label_control",
+			"font.face": "Karla",
+			"font.size": 16,
+		},
+
+		//labels
+		{
+			"class": "label_control",
+			"font.face": "Karla",
+			"font.size": 18
+		},
+
+		// //popup
+		// {
+		// 	"class": "popup_control html_popup",
+		// 	"font.face": "fantasquesansmono nerd font"
+		// },
 	],
 }
