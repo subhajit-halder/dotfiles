@@ -33,7 +33,7 @@ set font "FantasqueSansMono Nerd Font 20"
 # gruvbox material color scheme/theme
 include zathura-gruvbox-dark
 # recolor on startup?
-set recolor "false"
+set recolor "true"
 # key bindings
 map <PageUp> navigate previous
 map <PageDown> navigate next
