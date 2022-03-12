@@ -4,6 +4,8 @@
 # echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom startrek people)\e[0m"
  
 # PATHS and ENV Variables {{{
+# tempdir 
+export TMPDIR="$HOME/TMPDIR/"
 # appending path from https://stackoverflow.com/a/18077919/10356784
 # path+=('/opt/android-studio-2020.3.1.24-linux/android-studio/bin')
 # path+=("$HOME/bin") # $HOME/bin 

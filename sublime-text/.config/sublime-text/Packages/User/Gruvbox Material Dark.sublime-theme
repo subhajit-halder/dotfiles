@@ -41,6 +41,11 @@
 			"font.face": "Karla",
 			"font.italic": true
 		},
+		{
+			"class": "quick_panel_detail_label",
+			"font.size": 20,
+			"font.face": "Karla"
+		},
 
 		//input 
 		{
