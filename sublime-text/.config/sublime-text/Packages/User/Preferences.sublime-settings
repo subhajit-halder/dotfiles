@@ -23,4 +23,5 @@
 	"remember_layout": false,
 	"remember_workspace": false,
 	"hot_exit": "disabled",
+    // "mdpopups.user_css": "Packages/User/mdpopups.css",
 }

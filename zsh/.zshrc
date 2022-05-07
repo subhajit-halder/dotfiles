@@ -113,6 +113,7 @@ alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
 alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
 # yt-dlp reference: https://write.corbpie.com/downloading-youtube-videos-and-playlists-with-yt-dlp/
+alias ytdlp="yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --merge-output-format mp4"
 #best quality mp3: yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp3'
 alias ytdlpa="yt-dlp -f 'ba' -x --audio-format mp3 "
 alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"

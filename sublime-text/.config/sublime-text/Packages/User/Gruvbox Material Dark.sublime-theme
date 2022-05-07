@@ -68,10 +68,28 @@
 			"font.size": 18
 		},
 
-		// //popup
-		// {
-		// 	"class": "popup_control html_popup",
-		// 	"font.face": "fantasquesansmono nerd font"
-		// },
+		//popup
+		{
+			"class": "popup_control html_popup",
+			"font.face": "fantasquesansmono nerd font"
+		},
+
+		{
+			"class": "auto_complete",
+			"font.face": "fantasquesansmono nerd font"
+		},
+		{
+			"class": "auto_complete_details",
+			"font.face": "fantasquesansmono nerd font"
+		},
+		{
+			"class": "auto_complete_info",
+			"font.face": "fantasquesansmono nerd font"
+		},
+		{
+			"class": "tool_tip_label_control",
+			"font.face": "fantasquesansmono nerd font",
+			// "font.size" 
+		},
 	],
 }

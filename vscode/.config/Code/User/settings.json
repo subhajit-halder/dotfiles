@@ -5,7 +5,7 @@
   "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font'",
   "debug.console.fontSize": 16,
   "markdown.preview.fontSize": 16,
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Default Light+",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 16,
