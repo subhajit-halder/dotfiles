@@ -123,5 +123,6 @@ alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'" # get window manager class in x11
 alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/" # check if connected to cloudflare warp
 alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg" # for displaying image inside kitty
+alias 4chanDownloader="python3 /home/subhajit/Downloads/applications/4chan-downloader/inb4404.py"
 # }}}
 

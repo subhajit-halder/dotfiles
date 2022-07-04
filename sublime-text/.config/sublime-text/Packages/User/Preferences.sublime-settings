@@ -1,6 +1,6 @@
 {
 	"font_face": "Fantasquesansmono nerd font",
-	"font_size": 19,
+	"font_size": 16,
 	"themed_title_bar": true, 	// allow theme to change title bar
 	"ignored_packages":
 	[
