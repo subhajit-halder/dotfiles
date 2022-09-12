@@ -6,7 +6,6 @@
   "terminal.integrated.fontFamily": "'Iosevka Term'",
   "debug.console.fontSize": 16,
   "markdown.preview.fontSize": 16,
-  "workbench.colorTheme": "Gruvbox Material Dark",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 18,
@@ -38,5 +37,12 @@
   "window.restoreWindows": "none",
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
-  }
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "gruvboxMaterial.darkContrast": "hard",
+  "gruvboxMaterial.darkPalette": "mix"
 }
