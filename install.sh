@@ -11,14 +11,23 @@ git clone https://github.com/subhajit-halder/dotfiles.git dotfiles/
 ## zsh setup
 sudo apt install -y zsh curl wget alacritty kitty fortune-mod
 cd dotfiles
-stow -vt ~ zsh
 stow -vt ~ alacritty
 stow -vt ~ kitty
-source ~/.zshrc
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+cd
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+cd
+rm .zshrc
+cd 
+cd dotfiles
+stow -vt ~/ zsh 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten 
+git clone https://github.com/marlonrichert/zsh-autocomplete ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+git clone https://github.com/reobin/typewritten.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/typewritten 
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+git clone https://github.com/joshskidmore/zsh-fzf-history-search ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-fzf-history-search
+source ~/.zshrc
 
 ## misc
 sudo apt install -y firefox google-chrome-stable zathura caffiene gparted gnome-tweaks-tool menulibre
