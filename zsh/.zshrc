@@ -27,8 +27,8 @@ export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # THEME
-#ZSH_THEME="typewritten"
-ZSH_THEME="subhajit"
+ZSH_THEME="typewritten"
+#ZSH_THEME="subhajit"
 # typewritten theme settings{{{
 # source : https://typewritten.dev/#/prompt_customization
 TYPEWRITTEN_PROMPT_LAYOUT="pure" # singleline, half_pure , pure, singleline_verbose, and multiline
