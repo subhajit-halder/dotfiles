@@ -32,7 +32,7 @@ ln -s "$ZSH_CUSTOM/themes/typewritten/async.zsh" "$ZSH_CUSTOM/themes/async"
 source ~/.zshrc
 
 ## misc
-sudo apt install -y firefox google-chrome-stable zathura caffiene gparted gnome-tweaks-tool menulibre
+sudo apt install -y firefox google-chrome-stable zathura gparted gnome-tweaks menulibre
 # flatpak install -y flatseal
 
 ## Virtualbox
@@ -43,7 +43,7 @@ sudo apt install -y virtualbox
 sudo apt install -y default-jdk python3 python3-pip pipx
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-sudo apt install -y code
+sudo apt install -y code geany
 
 ## firewall
 sudo apt install -y ufw gufw
@@ -51,12 +51,13 @@ sudo ufw enable
 sudo apt install -y chkrootkit clamav clamtk clamtk-gnome
 
 ## nautilus open any terminal
-pip install --user nautilus-open-any-terminal
-glib-compile-schemas ~/.local/share/glib-2.0/schemas/
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
+#pip install --user nautilus-open-any-terminal
+#glib-compile-schemas ~/.local/share/glib-2.0/schemas/
+#gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
 
 
 ## flatpaks
 # flatapk install -y 
 
-
+## torrent stuff
+sudo apt install deluge torbrowser-launcher
