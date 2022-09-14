@@ -13,18 +13,18 @@ export TMPDIR="$HOME/TMPDIR/"
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # RUBY
-#path+=('/home/subhajit/.gem/ruby/2.7.0/bin')
-#path+=('/home/subhajit/.local/bin')
+#path+=('$HOME/.gem/ruby/2.7.0/bin')
+#path+=('$HOME/.local/bin')
 # or prepend
 # path=('/home/david/pear/bin' $path)
 # JAVA
 export JAVA_HOME="/usr/bin/java"
 # hyperledger executables;
-export PATH=/home/subhajit/MyProjects/Hyperledger/fabric-samples/bin:$PATH
+export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
 # }}}
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/subhajit/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # THEME
 #ZSH_THEME="typewritten"
@@ -111,18 +111,18 @@ source $ZSH/oh-my-zsh.sh
 alias bat="batcat" # bat is installed as batcat in debian
 alias tree2="tree -a -L 2"
 alias tree1="tree -a -L 1"
-alias pipes="/home/subhajit/Downloads/applications/pipes.sh/pipes.sh"
+alias pipes="$HOME/Downloads/applications/pipes.sh/pipes.sh"
 # yt-dlp reference: https://write.corbpie.com/downloading-youtube-videos-and-playlists-with-yt-dlp/
 alias ytdlp="yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --merge-output-format mp4"
 #best quality mp3: yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp3'
 alias ytdlpa="yt-dlp -f 'ba' -x --audio-format mp3 "
-alias cool-retro-terminal="/home/subhajit/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
-alias nerdfetch="/home/subhajit/Downloads/applications/nerdfetch/nerdfetch"
-alias rxfetch="/home/subhajit/Downloads/applications/rxfetch/rxfetch"
-alias shiori="/home/subhajit/Downloads/applications/shiori/shiori-linux-amd64"
+alias cool-retro-terminal="$HOME/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
+alias nerdfetch="$HOME/Downloads/applications/nerdfetch/nerdfetch"
+alias rxfetch="$HOME/Downloads/applications/rxfetch/rxfetch"
+alias shiori="$HOME/Downloads/applications/shiori/shiori-linux-amd64"
 alias getwmclass="xprop | grep WM_CLASS | awk '{print $4}'" # get window manager class in x11
 alias warpcheck="curl https://www.cloudflare.com/cdn-cgi/trace/" # check if connected to cloudflare warp
-alias icat="kitty +kitten icat --place 20x20@10x10 /home/subhajit/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg" # for displaying image inside kitty
-alias 4chanDownloader="python3 /home/subhajit/Downloads/applications/4chan-downloader/inb4404.py"
+alias icat="kitty +kitten icat --place 20x20@10x10 $HOME/Downloads/wallpapers/pfp/external-content.duckduckgo.com.jpeg" # for displaying image inside kitty
+alias 4chanDownloader="python3 $HOME/Downloads/applications/4chan-downloader/inb4404.py"
 # }}}
 
