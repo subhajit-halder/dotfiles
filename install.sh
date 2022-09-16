@@ -60,4 +60,4 @@ sudo apt install -y chkrootkit clamav clamtk clamtk-gnome
 # flatapk install -y 
 
 ## torrent stuff
-sudo apt install deluge torbrowser-launcher
+sudo apt install -y deluge torbrowser-launcher

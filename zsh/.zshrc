@@ -1,7 +1,8 @@
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 # fortune, to display a quote at top
-# echo -e "\e[1m\e[34m$(fortune -s -e literature work songs-poems wisdom startrek people)\e[0m"
+# echo -e "\e[1m\e[34m$(fortune -s -e literature wisdom startrek people)\e[0m"
+ echo -e "\e[1m\e[34m$(fortune -s -e literature)\e[0m"
  
 # PATHS and ENV Variables {{{
 # tempdir 
