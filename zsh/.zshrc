@@ -2,7 +2,7 @@
 
 # fortune, to display a quote at top
 # echo -e "\e[1m\e[34m$(fortune -s -e literature wisdom startrek people)\e[0m"
- echo -e "\e[1m\e[34m$(fortune -s -e literature)\e[0m"
+# echo -e "\e[1m\e[34m$(fortune -s -e literature)\e[0m"
  
 # PATHS and ENV Variables {{{
 # tempdir 
@@ -15,20 +15,24 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # RUBY
 #path+=('$HOME/.gem/ruby/2.7.0/bin')
-#path+=('$HOME/.local/bin')
+path+=('/home/subhajit/.local/bin')
 # or prepend
 # path=('/home/david/pear/bin' $path)
 # JAVA
 export JAVA_HOME="/usr/bin/java"
 # hyperledger executables;
-export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
+#export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
 # }}}
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# fzf settings
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border=sharp'
+
 # THEME
-ZSH_THEME="typewritten"
+#ZSH_THEME="typewritten"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="subhajit"
 # typewritten theme settings{{{
 # source : https://typewritten.dev/#/prompt_customization
