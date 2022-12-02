@@ -22,6 +22,11 @@ path+=('/home/subhajit/.local/bin')
 export JAVA_HOME="/usr/bin/java"
 # hyperledger executables;
 #export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
+# changing npm default directory to resolve permission errors
+# source : https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+export PATH=~/.npm-global/bin:$PATH
+# RUST 
+export PATH=$PATH:/home/subhajit/cargo/bin
 # }}}
 
 # Path to your oh-my-zsh installation.
@@ -31,13 +36,13 @@ export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border=sharp'
 
 # THEME
-#ZSH_THEME="typewritten"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="typewritten"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="subhajit"
 # typewritten theme settings{{{
 # source : https://typewritten.dev/#/prompt_customization
-TYPEWRITTEN_PROMPT_LAYOUT="pure" # singleline, half_pure , pure, singleline_verbose, and multiline
-# TYPEWRITTEN_SYMBOL="❯"
+TYPEWRITTEN_PROMPT_LAYOUT="singleline" # singleline, half_pure , pure, singleline_verbose, and multiline
+# TYPEWRITTEN_SYMBOL="->"
 # TYPEWRITTEN_ARROW_SYMBOL="->"
 # TYPEWRITTEN_RELATIVE_PATH="git" # git, home, adaptive, or off
 # TYPEWRITTEN_CURSOR="underscore" # underscore, beam, block, or terminal
@@ -103,6 +108,12 @@ pyenv() {
     pyenv "$@"
 }
 # }}}
+
+# Time zsh
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
 
 # Plugin options {{{
 #  zsh-fzf-history-search {{{
