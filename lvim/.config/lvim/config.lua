@@ -7,11 +7,10 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "gruvbox-material"
+lvim.colorscheme = "gruvbox"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -32,6 +31,8 @@ vim.opt.cursorcolumn = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8 -- keep cursor centered when scrolling
 vim.opt.sidescrolloff = 8
+
+lvim.lsp.null_ls.setup.debug = true
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -72,19 +73,33 @@ vim.opt.sidescrolloff = 8
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-
+lvim.builtin.bufferline.highlights = {
+  buffer_selected = { italic = false },
+  background = { italic = false },
+  warning_diagnostic_selected = { italic = false },
+  warning_selected = { italic = false },
+  error_selected = { italic = false },
+  error_diagnostic_selected = { italic = false },
+  hint_selected = { italic = false },
+  hint_diagnostic_selected = { italic = false },
+  info_selected = { italic = false },
+  info_diagnostic_selected = { italic = false },
+}
 
 -- for displaying spaces and end-of-line
 -- vim.opt.list = true
 -- vim.opt.listchars:append "space:⋅"
 -- vim.opt.listchars:append "eol:↴"
 -- lvim.builtin.indentlines.options = {
---   show_end_of_line = true,
---   space_char_blankline = " ",
---   show_current_context_start = true,
+-- show_end_of_line = true,
+-- space_char_blankline = " ",
+-- show_current_context = true,
+-- indent_blankline_char = "",
+-- show_current_context_start = true,
 -- }
+lvim.builtin.indentlines.options.show_current_context = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -121,8 +136,8 @@ lvim.builtin.treesitter.highlight.enable = true
 --     toggle_server_expand = "o",
 -- }
 
--- ---@usage disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
+---@usage disable automatic installation of servers
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
@@ -152,6 +167,9 @@ formatters.setup {
   {
     command = "black",
   },
+  {
+    command = "prettier"
+  },
   -- { command = "isort", filetypes = { "python" } },
   -- {
   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
@@ -172,75 +190,57 @@ linters.setup {
     args = { "--format", "default", "--stdin-display-name", "$FILENAME", "-" },
     filetypes = { "python" }
   },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
+  {
+    command = "eslint_d",
+  },
+  --   {
+  --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
+  --     command = "shellcheck",
+  --     ---@usage arguments to pass to the formatter
+  --     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+  --     extra_args = { "--severity", "warning" },
+  --   },
+  --   {
+  --     command = "codespell",
+  --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+  --     filetypes = { "javascript", "python" },
+  --   },
 }
 
 -- Additional Plugins
 lvim.plugins = {
   {
-    "sainnhe/gruvbox-material",
+    "ellisonleao/gruvbox.nvim",
     config = function()
-      -- For dark version.
-      vim.cmd('set background=dark')
-      -- Set contrast.
-      -- This configuration option should be placed before `colorscheme gruvbox-material`.
-      -- Available values: 'hard', 'medium'(default), 'soft'
-      vim.cmd("let g:gruvbox_material_background = 'medium'")
-      -- For better performance
-      vim.cmd("let g:gruvbox_material_better_performance = 1")
-      -- Set the foreground color palette used in this color scheme.
-      -- `material`: Carefully designed to have a soft contrast.
-      -- `mix`: Color palette obtained by calculating the mean of the other two.
-      -- `original`: The color palette used in the original gruvbox.
-      -- vim.cmd("let g:gruvbox_material_foreground = 'original'")
+      require("gruvbox").setup({
+        dim_inactive = false,
+        transparent_mode = false,
+        -- contrast = "hard" -- hard, soft or empty string
+        overrides = {
+          Operator = { italic = false },
+        }
+      })
+      vim.o.background = "dark"
     end
   },
   {
-    "catppuccin/nvim",
+    "sainnhe/gruvbox-material",
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha", -- latte, frappe, macchiato, mocha
-        background = { -- :h background
-          light = "latte",
-          dark = "mocha",
-        },
-        transparent_background = false,
-        term_colors = false,
-        dim_inactive = {
-          enabled = false,
-          shade = "dark",
-          percentage = 0.15,
-        },
-        no_italic = false, -- Force no italic
-        no_bold = false, -- Force no bold
-        styles = {
-          comments = { "italic" },
-          conditionals = { "italic" },
-        },
-        color_overrides = {},
-        custom_highlights = {},
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          nvimtree = true,
-          telescope = true,
-          notify = false,
-          mini = false,
-          -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-        },
-      })
+      vim.cmd('set background=dark') -- For dark version.
+      vim.cmd("let g:gruvbox_material_background = 'hard'") -- contrast: hard, medium, soft
+      vim.cmd("let g:gruvbox_material_better_performance = 1") -- better performance
+      vim.cmd("let g:gruvbox_material_enable_italic = 1")
+      vim.cmd("let g:gruvbox_material_enable_bold = 1")
+      -- vim.cmd("let g:gruvbox_material_foreground = 'original'") -- original, material, mix
     end
+  },
+  {
+    "sudormrfbin/cheatsheet.nvim",
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+    }
   }
 }
 
