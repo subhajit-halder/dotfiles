@@ -20,6 +20,8 @@ path+=('/home/subhajit/.local/bin')
 # path=('/home/david/pear/bin' $path)
 # JAVA
 export JAVA_HOME="/usr/bin/java"
+# Python virtualenv
+export WORKON_HOME=~/.virtualenvs
 # hyperledger executables;
 #export PATH=$HOME/MyProjects/Hyperledger/fabric-samples/bin:$PATH
 # changing npm default directory to resolve permission errors
@@ -37,18 +39,9 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border=sharp'
 
 # THEME
 ZSH_THEME="typewritten"
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="subhajit"
-# typewritten theme settings{{{
+# typewritten theme settings
 # source : https://typewritten.dev/#/prompt_customization
 TYPEWRITTEN_PROMPT_LAYOUT="singleline" # singleline, half_pure , pure, singleline_verbose, and multiline
-# TYPEWRITTEN_SYMBOL="->"
-# TYPEWRITTEN_ARROW_SYMBOL="->"
-# TYPEWRITTEN_RELATIVE_PATH="git" # git, home, adaptive, or off
-# TYPEWRITTEN_CURSOR="underscore" # underscore, beam, block, or terminal
-# TYPEWRITTEN_RIGHT_PROMPT_PREFIX="#"
-# TYPEWRITTEN_DISABLE_RETURN_CODE=true
-#}}}
 
 plugins=(
     fast-syntax-highlighting
@@ -59,55 +52,14 @@ plugins=(
     zsh-fzf-history-search
 )
 
-# PIP PACKAGE SEARCH{{{
-alias pip='function _pip(){
-    if [ $1 = "search" ]; then
-        pip_search "$2";
-    else pip "$@";
-    fi;
-};_pip'
-# }}}
-
-# NODE VERSION MANAGER{{{
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-nvm() {
-    unset -f nvm
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-    nvm "$@"
-}
-node() {
-    unset -f node
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    node "$@"
-}
-npm() {
-    unset -f npm
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    npm "$@"
-}
-# }}}
-
-# PYENV (PYTHON VERSION MANAGER){{{
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1 # change prompt when activating venv
-# eval "$(pyenv init -)"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv virtualenv-init -)"
-pyenv() {
-    unset -f pyenv
-    export PATH="$HOME/.pyenv/bin:$PATH"
-    eval "$(pyenv init - )"
-    eval "$(pyenv init --path)"
-    eval "$(pyenv virtualenv-init -)"
-    pyenv "$@"
-}
-# }}}
+# # PIP PACKAGE SEARCH{{{
+# alias pip='function _pip(){
+#     if [ $1 = "search" ]; then
+#         pip_search "$2";
+#     else pip "$@";
+#     fi;
+# };_pip'
+# # }}}
 
 # Time zsh
 timezsh() {
@@ -115,12 +67,10 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
-# Plugin options {{{
-#  zsh-fzf-history-search {{{
+# plugin options
 DISABLE_FZF_AUTO_COMPLETION="true"
-# }}}
-# }}}
 
+# Source https://ohmyz.sh
 source $ZSH/oh-my-zsh.sh
 
 # ALIASES{{{
@@ -142,3 +92,17 @@ alias icat="kitty +kitten icat --place 20x20@10x10 $HOME/Downloads/wallpapers/pf
 alias 4chanDownloader="python3 $HOME/Downloads/applications/4chan-downloader/inb4404.py"
 # }}}
 
+# SOURCE ASDF
+. $HOME/.asdf/asdf.sh
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+# virtualenvwrapper
+# . $(asdf where python)/bin/virtualenvwrapper.sh
+
+# direnv
+eval "$(asdf exec direnv hook zsh)"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

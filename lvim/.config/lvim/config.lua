@@ -139,11 +139,13 @@ lvim.builtin.treesitter.highlight.enable = true
 ---@usage disable automatic installation of servers
 lvim.lsp.installer.setup.automatic_installation = true
 
--- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
--- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
+---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
+---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "bashls" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
+-- require'lspconfig'.pyright.setup{
+--   
+-- }
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype
@@ -168,7 +170,12 @@ formatters.setup {
     command = "black",
   },
   {
-    command = "prettier"
+    command = "prettier",
+    extra_args = { "--trailing-comma", "all", "--single-quote", "--print-width", "80", "--tab-width", "2",
+      "--arrow-parens", "avoid" }
+  },
+  {
+    command = "beautysh",
   },
   -- { command = "isort", filetypes = { "python" } },
   -- {
@@ -192,6 +199,9 @@ linters.setup {
   },
   {
     command = "eslint_d",
+  },
+  {
+    command = "shellcheck",
   },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
@@ -237,9 +247,9 @@ lvim.plugins = {
   {
     "sudormrfbin/cheatsheet.nvim",
     requires = {
-      {'nvim-telescope/telescope.nvim'},
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
+      { 'nvim-telescope/telescope.nvim' },
+      { 'nvim-lua/popup.nvim' },
+      { 'nvim-lua/plenary.nvim' },
     }
   }
 }
