@@ -1,10 +1,12 @@
+# zmodload zsh/zprof
+
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
 # fortune, to display a quote at top
-# echo -e "\e[1m\e[34m$(fortune -s -e literature wisdom startrek people)\e[0m"
-# echo -e "\e[1m\e[34m$(fortune -s -e literature)\e[0m"
+# echo -e "\e[1m\e[34m$(fortune -s -e literature fortunes)\e[0m"
  
 # PATHS and ENV Variables {{{
+#
 # tempdir 
 export TMPDIR="$HOME/TMPDIR/"
 # appending path from https://stackoverflow.com/a/18077919/10356784
@@ -27,7 +29,8 @@ export WORKON_HOME=~/.virtualenvs
 # changing npm default directory to resolve permission errors
 # source : https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
 export PATH=~/.npm-global/bin:$PATH
-# RUST 
+#
+# RUST cargo
 export PATH=$PATH:/home/subhajit/cargo/bin
 # }}}
 
@@ -52,15 +55,6 @@ plugins=(
     zsh-fzf-history-search
 )
 
-# # PIP PACKAGE SEARCH{{{
-# alias pip='function _pip(){
-#     if [ $1 = "search" ]; then
-#         pip_search "$2";
-#     else pip "$@";
-#     fi;
-# };_pip'
-# # }}}
-
 # Time zsh
 timezsh() {
   shell=${1-$SHELL}
@@ -81,7 +75,7 @@ alias pipes="$HOME/Downloads/applications/pipes.sh/pipes.sh"
 # yt-dlp reference: https://write.corbpie.com/downloading-youtube-videos-and-playlists-with-yt-dlp/
 alias ytdlp="yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --merge-output-format mp4"
 #best quality mp3: yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=1La4QzGeaaQ -o '%(id)s.mp3'
-alias ytdlpa="yt-dlp -f 'ba' -x --audio-format mp3 "
+alias ytdlpa="yt-dlp -f 'ba' -x --audio-format mp3 --embed-thumbnail"
 alias cool-retro-terminal="$HOME/Downloads/applications/cool-retro-terminal/Cool-Retro-Term-1.1.1-x86_64.AppImage"
 alias nerdfetch="$HOME/Downloads/applications/nerdfetch/nerdfetch"
 alias rxfetch="$HOME/Downloads/applications/rxfetch/rxfetch"
@@ -106,3 +100,5 @@ autoload -Uz compinit && compinit
 # direnv
 eval "$(asdf exec direnv hook zsh)"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+# zprof

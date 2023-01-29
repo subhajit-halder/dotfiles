@@ -75,30 +75,22 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.bufferline.highlights = {
-  buffer_selected = { italic = false },
-  background = { italic = false },
-  warning_diagnostic_selected = { italic = false },
-  warning_selected = { italic = false },
-  error_selected = { italic = false },
-  error_diagnostic_selected = { italic = false },
-  hint_selected = { italic = false },
-  hint_diagnostic_selected = { italic = false },
-  info_selected = { italic = false },
-  info_diagnostic_selected = { italic = false },
-}
+-- lvim.builtin.bufferline.highlights = {
+--   buffer_selected = { italic = false },
+--   background = { italic = false },
+--   warning_diagnostic_selected = { italic = false },
+--   warning_selected = { italic = false },
+--   error_selected = { italic = false },
+--   error_diagnostic_selected = { italic = false },
+--   hint_selected = { italic = false },
+--   hint_diagnostic_selected = { italic = false },
+--   info_selected = { italic = false },
+--   info_diagnostic_selected = { italic = false },
+-- }
 
 -- for displaying spaces and end-of-line
--- vim.opt.list = true
--- vim.opt.listchars:append "space:⋅"
--- vim.opt.listchars:append "eol:↴"
--- lvim.builtin.indentlines.options = {
--- show_end_of_line = true,
--- space_char_blankline = " ",
--- show_current_context = true,
--- indent_blankline_char = "",
--- show_current_context_start = true,
--- }
+vim.opt.list = true
+vim.cmd("set list listchars=tab:»·,trail:·")
 lvim.builtin.indentlines.options.show_current_context = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
@@ -117,7 +109,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+-- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
 
 -- generic LSP settings
@@ -137,14 +129,14 @@ lvim.builtin.treesitter.highlight.enable = true
 -- }
 
 ---@usage disable automatic installation of servers
-lvim.lsp.installer.setup.automatic_installation = true
+-- lvim.lsp.installer.setup.automatic_installation = true
 
 ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "bashls" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require'lspconfig'.pyright.setup{
---   
+--
 -- }
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
@@ -166,17 +158,13 @@ lvim.lsp.installer.setup.automatic_installation = true
 -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  {
-    command = "black",
-  },
+  { command = "black", },
   {
     command = "prettier",
     extra_args = { "--trailing-comma", "all", "--single-quote", "--print-width", "80", "--tab-width", "2",
       "--arrow-parens", "avoid" }
   },
-  {
-    command = "beautysh",
-  },
+  { command = "beautysh", },
   -- { command = "isort", filetypes = { "python" } },
   -- {
   --   -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
@@ -197,12 +185,10 @@ linters.setup {
     args = { "--format", "default", "--stdin-display-name", "$FILENAME", "-" },
     filetypes = { "python" }
   },
-  {
-    command = "eslint_d",
-  },
-  {
-    command = "shellcheck",
-  },
+  -- {
+  --   command = "eslint_d",
+  -- },
+  { command = "shellcheck", },
   --   {
   --     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
   --     command = "shellcheck",
@@ -215,10 +201,17 @@ linters.setup {
   --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
   --     filetypes = { "javascript", "python" },
   --   },
+
 }
 
 -- Additional Plugins
 lvim.plugins = {
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      require('leap').add_default_mappings()
+    end
+  },
   {
     "ellisonleao/gruvbox.nvim",
     config = function()
@@ -237,7 +230,7 @@ lvim.plugins = {
     "sainnhe/gruvbox-material",
     config = function()
       vim.cmd('set background=dark') -- For dark version.
-      vim.cmd("let g:gruvbox_material_background = 'hard'") -- contrast: hard, medium, soft
+      vim.cmd("let g:gruvbox_material_background = 'medium'") -- contrast: hard, medium, soft
       vim.cmd("let g:gruvbox_material_better_performance = 1") -- better performance
       vim.cmd("let g:gruvbox_material_enable_italic = 1")
       vim.cmd("let g:gruvbox_material_enable_bold = 1")
@@ -251,6 +244,9 @@ lvim.plugins = {
       { 'nvim-lua/popup.nvim' },
       { 'nvim-lua/plenary.nvim' },
     }
+  },
+  {
+    "psliwka/vim-smoothie",
   }
 }
 
@@ -260,10 +256,10 @@ lvim.plugins = {
 --   -- enable wrap mode for json files only
 --   command = "setlocal wrap",
 -- })
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "zsh",
+  callback = function()
+    -- let treesitter use bash highlight for zsh files as well
+    require("nvim-treesitter.highlight").attach(0, "bash")
+  end,
+})
